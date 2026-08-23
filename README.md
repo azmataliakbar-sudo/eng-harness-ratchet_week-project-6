@@ -69,6 +69,40 @@ Two failures with the same shape became impossible after the first.
 
 Classify every mistake, fix it in that class's surface, and the same shape never happens twice. The class that dominates tells you where your harness is thinnest.
 
+## What Is the Ratchet, Exactly?
+
+The ratchet is a **habit**, not one single file:
+
+- Every mistake becomes a permanent fix.
+- The fix lives in a different "surface" depending on the class:
+  - `didnt_know` → skill file
+  - `wasnt_stopped` → permission/guardrail
+  - `wasnt_checked` → gate/hook
+  - `planned_badly` → spec/plan
+
+In this simulation, `ratchet.ps1` logs the fix into `HARNESS.md` as a stand-in for actually editing the real rule. In a real system, you would edit the actual guardrail/skill/gate/spec file.
+
+## Why Did a Mistake Repeat?
+
+The repeats are **planted on purpose**:
+
+- Day 3 repeats "read secret" to prove the Day 1 guardrail holds.
+- Day 6 repeats "skipped test" to prove the Day 4 gate holds.
+
+When the same shape appears again, it is **blocked** (`RATCHET HELD`), not counted as a new failure. That is how we verify the earlier fix made the mistake impossible.
+
+## Test Commands (Confirmed)
+
+Run from the project folder:
+
+```powershell
+cd C:\Projects\eng_harness\failure_classes
+.\reset.ps1
+.\run-week.ps1
+```
+
+Expected: 7 days printed, `wasnt_stopped` dominates (2), and 2 repeat shapes are blocked.
+
 ## Project Status
 
 - Four classes defined: ✅
