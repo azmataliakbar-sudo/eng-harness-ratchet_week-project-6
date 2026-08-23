@@ -2,7 +2,7 @@ param(
     [int]$Days = 7
 )
 
-$root = "C:\Projects\eng_harness\failure_classes"
+$root = "C:\Projects\eng_harness\ratchet_week"
 $startedAt = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
 # Parallel arrays: mistake text and its fix.
@@ -29,7 +29,7 @@ $fixes = @(
 $counts = @{ didnt_know = 0; wasnt_stopped = 0; wasnt_checked = 0; planned_badly = 0 }
 $blocked = 0
 
-Write-Host "===== Failure Classes: 7-Day Simulation =====" -ForegroundColor DarkCyan
+Write-Host "===== Ratchet Week: 7-Day Simulation =====" -ForegroundColor DarkCyan
 
 for ($d = 1; $d -le $Days; $d++) {
     $idx = $d - 1

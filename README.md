@@ -1,4 +1,4 @@
-# The Failure Classes — Harness Engineering Project 6
+# The Ratchet Week — Harness Engineering Project 6
 
 ## Project Overview
 
@@ -20,7 +20,7 @@ The assignment says "seven days." A week is just 7 batches of mistakes. We run a
 ## Project Structure
 
 ```
-failure_classes/
+ratchet_week/
 ├── .git/
 ├── classify.ps1      # maps a mistake to one of 4 classes
 ├── ratchet.ps1       # applies the fix + logs one line
@@ -96,7 +96,7 @@ When the same shape appears again, it is **blocked** (`RATCHET HELD`), not count
 Run from the project folder:
 
 ```powershell
-cd C:\Projects\eng_harness\failure_classes
+cd C:\Projects\eng_harness\ratchet_week
 .\reset.ps1
 .\run-week.ps1
 ```
